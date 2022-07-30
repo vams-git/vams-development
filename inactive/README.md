@@ -4,21 +4,23 @@ Natively, there's no inactive field available on Maintenance Pattern (MP) record
 In order to identify whether an MP has an active equipment, users would need to check the MP equipment tab of each MPs. This can be daunting when dealing with thousands of MP records.
 
 ### Specification
-- MP record view to display status of MP equipment via a field called inactive
+- MP record view to display status of MP equipment via a field called ***Inactive***
 - The field should be a flag type (boolean type) to indicate the MP is active or not
-- The field to be protected since it is logical value determined based on MP equipment status
+- The field to be protected since it is logical value determined by the MP equipment status
 - Field logic:
-  - inactive = TRUE
+  - Inactive = TRUE
     - no MP equipment exist
     - all MP equipment status inactive
-  - inactive = FALSE
+  - Inactive = FALSE
     - one or more MP equipment status is not inactive
 
 ### Solution
-- mtp_udfchkbox04 on MP record view is chosen to be the inactive field
+- mtp_udfchkbox04 on MP record view is chosen to be the  ***Inactive*** field
   - [x] add to field allocation spreadsheet
-  - [x] relabel field to "inactive" in VAMS
-  - [x] set field to protected (UG specific currently configured for ADMIN, VCS-* UG)
+  - [x] label field to  ***Inactive*** in VAMS
+  - [x] set field to protected (currently configured for ADMIN, VCS-* UG)
   - [ ] set field to protected via extensible framework (fallback safeguard)
-- 
-    
+- MP record is inactive by default
+  - [x] Flex R5MAINTENANCEPATTERN/5 - Post Insert
+- MP record is active when one or more MP equipment status is Active or Pending Inactive
+  - [x] Flex R5PATTERNEQUIPMENT/20 - Post Insert/Update
