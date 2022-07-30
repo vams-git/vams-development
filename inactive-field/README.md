@@ -27,7 +27,7 @@ In order to identify whether an MP has an active equipment, users would need to 
   - [x] add to field allocation spreadsheet
   - [x] label field to Inactive in VAMS
   - [x] set field to protected (currently configured for ADMIN, VCS-* UG)
-  - [ ] set field to protected via extensible framework (fallback safeguard)
+  - [ ] set field to protected by default for all UG via extensible framework (fallback safeguard)
 - MP record is inactive by default
   - [x] [Flex R5MAINTENANCEPATTERN/5 - Post Insert](./R5MAINTENANCEPATTERNS_5_Post_Insert.sql)
 - MP record is active when one or more MP equipment status is Active or Pending Inactive
