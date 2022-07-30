@@ -11,13 +11,13 @@ In order to identify whether an MP has an active equipment, users would need to 
   - Inactive = TRUE
     - no MP equipment exist
     - all MP equipment status inactive
-  - Inactive :black_large_square:	:ballot_box_with_check:
+  - Inactive :black_large_square::ballot_box_with_check::white_square_button:	
     - one or more MP equipment status is not inactive
 
 ### Solution
 - mtp_udfchkbox04 on MP record view is chosen to be the  ***Inactive*** field
   - [x] add to field allocation spreadsheet
-  - [x] label field to  ***Inactive*** in VAMS
+  - [x] label field to Inactive in VAMS
   - [x] set field to protected (currently configured for ADMIN, VCS-* UG)
   - [ ] set field to protected via extensible framework (fallback safeguard)
 - MP record is inactive by default
