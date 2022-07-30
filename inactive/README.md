@@ -9,4 +9,11 @@ In order to identify whether an MP has an active equipment, users would need to 
 - The field to be protected since it is logical value determined based on MP equipment status
 - Field logic:
   - inactive = TRUE
-    - dddsfsfs   
+    - no MP equipment exist
+    - all MP equipment status inactive
+  - inactive = FALSE
+    - one or more MP equipment status is not inactive
+
+### Solution
+- Inactive field is mtp_udfchkbox04
+    
