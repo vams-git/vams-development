@@ -6,7 +6,7 @@ DECLARE
 BEGIN
   SELECT * INTO mtp FROM R5MAINTENANCEPATTERNS
   WHERE ROWID = :rowid;
-  
+  -- initilise MP as inactive on insert
   IF nvl(mtp.mtp_udfchkbox04,'-') = '-' THEN
     UPDATE R5MAINTENANCEPATTERNS
     SET   mtp_udfchkbox04 = '+'
