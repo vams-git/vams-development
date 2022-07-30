@@ -22,5 +22,6 @@ In order to identify whether an MP has an active equipment, users would need to 
   - [ ] set field to protected via extensible framework (fallback safeguard)
 - MP record is inactive by default
   - [x] Flex R5MAINTENANCEPATTERN/5 - Post Insert
+  [Contribution guidelines for this project](docs/CONTRIBUTING.md)
 - MP record is active when one or more MP equipment status is Active or Pending Inactive
   - [x] Flex R5PATTERNEQUIPMENT/20 - Post Insert/Update
