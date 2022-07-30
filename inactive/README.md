@@ -7,6 +7,6 @@ In order to identify whether an MP has an active equipment, users would need to 
 - MP record view to display status of MP equipment via a field called inactive
 - The field should be a flag type (boolean type) to indicate the MP is active or not
 - The field to be protected since it is logical value determined based on MP equipment status
-- Field logic :
+- Field logic:
   - inactive = TRUE
-    -   
+    - dddsfsfs   
