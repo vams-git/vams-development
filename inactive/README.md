@@ -8,10 +8,10 @@ In order to identify whether an MP has an active equipment, users would need to 
 - The field should be a flag type (boolean type) to indicate the MP is active or not
 - The field to be protected since it is logical value determined by the MP equipment status
 - Field logic:
-  - Inactive = TRUE
+  - Inactive :white_check_mark:
     - no MP equipment exist
     - all MP equipment status inactive
-  - Inactive :black_large_square::ballot_box_with_check::green_square::white_check_mark:		
+  - Inactive :green_square:
     - one or more MP equipment status is not inactive
 
 ### Solution
