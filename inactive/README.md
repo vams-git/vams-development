@@ -11,7 +11,7 @@ In order to identify whether an MP has an active equipment, users would need to 
   - Inactive = TRUE
     - no MP equipment exist
     - all MP equipment status inactive
-  - Inactive :black_large_square::ballot_box_with_check::white_square_button:	
+  - Inactive :black_large_square::ballot_box_with_check::green_square::white_check_mark:		
     - one or more MP equipment status is not inactive
 
 ### Solution
