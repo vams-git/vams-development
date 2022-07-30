@@ -15,5 +15,10 @@ In order to identify whether an MP has an active equipment, users would need to 
     - one or more MP equipment status is not inactive
 
 ### Solution
-- Inactive field is mtp_udfchkbox04
+- mtp_udfchkbox04 on MP record view is chosen to be the inactive field
+  - [x] add to field allocation spreadsheet
+  - [x] relabel field to "inactive" in VAMS
+  - [x] set field to protected (UG specific currently configured for ADMIN, VCS-* UG)
+  - [ ] set field to protected via extensible framework (fallback safeguard)
+- 
     
