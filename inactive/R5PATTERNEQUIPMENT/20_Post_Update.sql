@@ -24,8 +24,8 @@ BEGIN
     WHERE peq_mp_org = peq.peq_mp_org
       AND peq_mp = peq.peq_mp
       AND peq_revision = peq.peq_revision
-      AND peq_object_org = peq.peq_mp_org
-      AND peq_mp = peq.peq_mp
+      AND peq_object_org != peq.peq_object_org
+      AND peq_object != peq.peq_object
       AND peq_status != 'I';
 
     -- maintain active stat if active eq > 0
@@ -54,6 +54,6 @@ EXCEPTION
   RAISE_APPLICATION_ERROR (-20003, imsg);
   WHEN OTHERS THEN
   RAISE_APPLICATION_ERROR (-20003,
-    'ERR R5PATTERNEQUIPMENT/Post Update/20/'
+    'ERR R5PATTERNEQUIPMENT/20/Post Update/'
     ||Substr(SQLERRM, 1, 500));
 END;
