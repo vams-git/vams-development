@@ -7,7 +7,7 @@ BEGIN
   SELECT * INTO mtp FROM R5MAINTENANCEPATTERNS
   WHERE ROWID = :rowid;
   
-  IF nvl(mtp.mtp_udfchkbox04,'-') = '-' THEN
+  IF nvl(mtp.mtp_udfchkbox04,'-') != '+' THEN
     UPDATE R5MAINTENANCEPATTERNS
     SET   mtp_udfchkbox04 = '+'
     WHERE mtp_org = mtp.mtp_org
@@ -20,6 +20,6 @@ EXCEPTION
   RAISE_APPLICATION_ERROR (-20003, imsg);
   WHEN OTHERS THEN
   RAISE_APPLICATION_ERROR (-20003,
-    'ERR R5MAINTENANCEPATTERNS/5/Post Insert/'
+    'ERR/R5MAINTENANCEPATTERNS/5/Insert/'
     ||Substr(SQLERRM, 1, 500));
 END;
