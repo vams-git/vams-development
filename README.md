@@ -1,1 +1,0 @@
-# vams-maintenance-pattern
