@@ -30,7 +30,7 @@ In order to identify whether an MP has an active equipment, users would need to 
   - [x] set field to protected (currently configured for ADMIN, VCS-* UG)
   - [ ] set field to protected by default for all UG via extensible framework (fallback safeguard)
 - MP record is inactive by default
-  - [x] [Flex R5MAINTENANCEPATTERN/5 - Post Insert](./flex/R5MAINTENANCEPATTERNS_5_Post_Insert.sql)
+  - [x] [Flex R5MAINTENANCEPATTERN/5 - Post Insert](./FLEX/R5MAINTENANCEPATTERNS_5_Post_Insert.sql)
 - MP record is active when one or more MP equipment status is Active or Pending Inactive
-  - [x] [Flex R5PATTERNEQUIPMENT/20 - Post Insert](./flex/R5PATTERNEQUIPMENT_20_Post_Insert.sql)
-  - [x] [Flex R5PATTERNEQUIPMENT/20 - Post Update](./flex/R5PATTERNEQUIPMENT_20_Post_Update.sql)
+  - [x] [Flex R5PATTERNEQUIPMENT/20 - Post Insert](./FLEX/R5PATTERNEQUIPMENT_20_Post_Insert.sql)
+  - [x] [Flex R5PATTERNEQUIPMENT/20 - Post Update](./FLEX/R5PATTERNEQUIPMENT_20_Post_Update.sql)
