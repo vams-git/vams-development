@@ -34,3 +34,6 @@ In order to identify whether an MP has an active equipment, users would need to 
 - MP record is active when one or more MP equipment status is Active or Pending Inactive
   - [x] [Flex R5PATTERNEQUIPMENT/20 - Post Insert](./FLEX/R5PATTERNEQUIPMENT_20_Post_Insert.sql)
   - [x] [Flex R5PATTERNEQUIPMENT/20 - Post Update](./FLEX/R5PATTERNEQUIPMENT_20_Post_Update.sql)
+  
+## MP Functions
+
