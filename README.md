@@ -17,7 +17,7 @@ In order to identify whether an MP has an active equipment, users would need to 
   [x] mtp_udfchkbox04 to be use
 - The field should be a flag type (boolean type) to indicate the MP is active or not
 - The field to be protected since it is logical value determined by the MP equipment status
-  - [x] [extensible framework on WSMPAT_HDR](./EXF/WSMPAT_EXT_HDR_01.js)
+  - [x] [EXF WSMPAT_HDR](./EXF/WSMPAT_EXT_HDR_01.js)
 - Field logic:
   - Inactive :white_check_mark:
     - no MP equipment exist
