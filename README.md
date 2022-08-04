@@ -33,7 +33,7 @@ In order to identify whether an MP has an active equipment, users would need to 
 ![inactive screenshot](./assets/images/inactive_screenshot.PNG)
   
 ## MP Functions
-The MP module was identified to be a candidate to manage meter-based maintenance schedule due to it's ability to handle complex maintenace strategies. Natively, the EAM only allows fixed or veriable types for meter-based WOs. This poses some risk when dealing with high frequency meter plans as it required WO to be closed prior to relasing the next WO. To overcome this, we have deployed some flexes to allow systematic release of the next WO so that it would not be impacted by Business planning.
+The MP module was identified to be a candidate to manage meter-based maintenance schedule due to it's ability to handle complex maintenace strategies. Natively, the EAM only allows fixed or variable types for meter-based WOs. This poses some risk when dealing with high frequency meter plans as it requires WO to be closed prior to relasing the one. To overcome this, we have deployed some flexes to allow systematic release of the next WO so that it would not be impacted by Business planning.
 
 To manage these non-native features, the ability to maintained the module via Web is highly desired.
 
@@ -47,7 +47,12 @@ To manage these non-native features, the ability to maintained the module via We
     - CPMP, Copy MP sequence
   - [x] mtp_udfchar03, ***Sequence src.*** - lookup for MP sequence to copy
   - [x] mtp_udfchar04, ***Equipment src.*** - lookup for MP equipment to restart
-  - [x] mtp_udfchar05, ***Sequence src.*** - lookup for MP equipment org to restart
+  - [x] mtp_udfchar05, ***Equip. Org. src.*** - lookup for MP equipment org to restart
+- Field behaviors
+  - [x] Functions - editable
+  - [x] Sequence src. - disabled by default, editable when CPMP function selected
+  - [x] Equipment src. - disabled by default, editable when RSET function selected
+  - [x] Equip. Org. src.  - disabled by default, editable when RSET function selected
   
 #### Restart MP
 
