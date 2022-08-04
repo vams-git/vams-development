@@ -19,7 +19,7 @@ In order to identify whether an MP has an active equipment, users would need to 
   - [x] mtp_udfchkbox04 to be use
 - The field should be a flag type (boolean type) to indicate the MP is active or not
 - The field to be protected since it is logical value determined by the MP equipment status
-  - [x] [EXF WSMPAT_HDR](./EXF/WSMPAT_EXT_HDR_01.js)
+  - [x] [EXF WSMPAT_HDR_01](./EXF/WSMPAT_EXT_HDR_01.js)
 - Field logic:
   - Inactive :white_check_mark:
     - no MP equipment exist
@@ -45,14 +45,12 @@ To manage these non-native features, the ability to maintained the module via We
     - RSET, Restart MP
     - CLMP, Clear MP sequence
     - CPMP, Copy MP sequence
-  - [x] mtp_udfchar03, ***Sequence src.*** - lookup for MP sequence to copy
-  - [x] mtp_udfchar04, ***Equipment src.*** - lookup for MP equipment to restart
-  - [x] mtp_udfchar05, ***Equip. Org. src.*** - lookup for MP equipment org to restart
-- Field behaviors
-  - [x] Functions - editable
-  - [x] Sequence src. - disabled by default, editable when CPMP function selected
-  - [x] Equipment src. - disabled by default, editable when RSET function selected
-  - [x] Equip. Org. src.  - disabled by default, editable when RSET function selected
+  - [x] mtp_udfchar03, ***Sequence src.*** - lookup for MP sequence to copy; disabled by default, editable when CPMP function selected
+  - [x] mtp_udfchar04, ***Equipment src.*** - lookup for MP equipment to restart; disabled by default, editable when RSET function selected
+  - [x] mtp_udfchar05, ***Equip. Org. src.*** - lookup for MP equipment org to restart; disabled by default, editable when RSET function selected
+  - [x] [EXF WSMPAT_HDR_02](./EXF/WSMPAT_EXT_HDR_02.js)
+    
+![adm_fn screenshot](./assets/images/adm_fn_screenshot.PNG)
   
 #### Restart MP
 
