@@ -1,5 +1,7 @@
-# Maintenance Pattern Development
+
 [![VEOLIA1_TST](https://img.shields.io/badge/build-VEOLIA1__TST-yellowgreen)](./)
+
+# Maintenance Pattern
 
 ## Inactive field
 Natively, inactive field is not available on MP record view. The active status of a MP seems to be driven by the status of the associated MP equipment i.e. if the MP equipment status is active we can say that the MP is active as well.
