@@ -1,8 +1,8 @@
 # Maintenance Pattern Development
-[![VEOLIA1_TST](https://img.shields.io/badge/build-VEOLIA1__TST-yellowgreen)](./)
+[![VEOLIA1_TST](https://img.shields.io/badge/build-VEOLIA1__TST-yellowgreen)](/)
 
 ## Inactive field
-Natively, inactive field is not available on Maintenance Pattern (MP) record view. The active status of a MP seems to be driven by the status of the associated MP equipment i.e. if the MP equipment status is active we can say that the MP is active as well.
+Natively, inactive field is not available on MP record view. The active status of a MP seems to be driven by the status of the associated MP equipment i.e. if the MP equipment status is active we can say that the MP is active as well.
 
 Design wise this is inconsistent when compared to another scheduler module (PM Schedules)
 | Screen | Tab | Inactive |
@@ -16,7 +16,7 @@ In order to identify whether an MP has an active equipment, users would need to 
 
 ### Specification
 - MP record view to display status of MP equipment via a field called ***Inactive***
-  [x] mtp_udfchkbox04 to be use
+  - [x] mtp_udfchkbox04 to be use
 - The field should be a flag type (boolean type) to indicate the MP is active or not
 - The field to be protected since it is logical value determined by the MP equipment status
   - [x] [EXF WSMPAT_HDR](/EXF/WSMPAT_EXT_HDR_01.js)
@@ -32,5 +32,5 @@ In order to identify whether an MP has an active equipment, users would need to 
     
 ![inactive screenshot](/assets/images/inactive_screenshot.png)
   
-## MP Functions
-
+### MP Functions
+The MP module was identified to be a candidate to manage meter-based maintenance schedule due to it's ability to handle complex maintenace strategies. Natively, the EAM only allows fixed or veriable types for meter-based WOs[^1]. This pose some risk when dealing with high frequency meter plans. To overcome this, we have deployed some flex to allow systematic release of the next WO so that it would not be impacted by Business.
