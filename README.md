@@ -41,5 +41,14 @@ To manage these non-native features, the ability to maintained the module via We
 - Section to host maintenance function on MP record view
   - [x] rename udfsection to Admin Functions
 - Fields associated:
-  - [x] mtp_udfchar02, ***Functions*** - selection function to perform
-  - [x]
+  - [x] mtp_udfchar02, ***Functions*** - selection administration function to perform
+    - RSET, Restart MP
+    - CLMP, Clear MP sequence
+    - CPMP, Copy MP sequence
+  - [x] mtp_udfchar03, ***Sequence src.*** - lookup for MP sequence to copy
+  - [x] mtp_udfchar04, ***Equipment src.*** - lookup for MP equipment to restart
+  - [x] mtp_udfchar05, ***Sequence src.*** - lookup for MP equipment org to restart
+  
+#### Restart MP
+
+
