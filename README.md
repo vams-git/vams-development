@@ -27,7 +27,6 @@ In order to identify whether an MP has an active equipment, users would need to 
       - [x] [Flex R5PATTERNEQUIPMENT/20/Update](./FLEX/R5PATTERNEQUIPMENT/020_Update.sql)
   - Inactive :green_square:
     - one or more MP equipment status is not inactive
-      - [x] [Flex R5PATTERNEQUIPMENT/20/Insert](./FLEX/R5PATTERNEQUIPMENT_20_Post_Insert.sql)
   
 ## MP Functions
 
