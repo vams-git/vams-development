@@ -14,26 +14,20 @@ In order to identify whether an MP has an active equipment, users would need to 
 
 ### Specification
 - MP record view to display status of MP equipment via a field called ***Inactive***
+  [x] mtp_udfchkbox04 to be use
 - The field should be a flag type (boolean type) to indicate the MP is active or not
 - The field to be protected since it is logical value determined by the MP equipment status
+  [x] [extensible framework on WSMPAT_HDR](./EXF/WSMPAT_EXT_HDR_01.js)
 - Field logic:
   - Inactive :white_check_mark:
     - no MP equipment exist
+      [x] [Flex R5MAINTENANCEPATTERN/5/Insert](./FLEX/R5MAINTENANCEPATTERNS/005_Insert.sql)
     - all MP equipment status inactive
+      [x] [Flex R5PATTERNEQUIPMENT/20/Insert](./FLEX/R5PATTERNEQUIPMENT_20_Post_Insert.sql)
+      [x] [Flex R5PATTERNEQUIPMENT/20/Update](./FLEX/R5PATTERNEQUIPMENT/020_Update.sql)
   - Inactive :green_square:
     - one or more MP equipment status is not inactive
-
-### Solution
-- mtp_udfchkbox04 on MP record view is chosen to be the  ***Inactive*** field
-  - [x] add to field allocation spreadsheet
-  - [x] label field to Inactive in VAMS
-  - [x] set field to protected (currently configured for ADMIN, VCS-* UG)
-  - [x] set field to protected by default for all UG via [extensible framework](./EXF/WSMPAT_EXT_HDR_01.js) (fallback safeguard)
-- MP record is inactive by default
-  - [x] [Flex R5MAINTENANCEPATTERN/5 - Post Insert](./FLEX/R5MAINTENANCEPATTERNS_5_Post_Insert.sql)
-- MP record is active when one or more MP equipment status is Active or Pending Inactive
-  - [x] [Flex R5PATTERNEQUIPMENT/20 - Post Insert](./FLEX/R5PATTERNEQUIPMENT_20_Post_Insert.sql)
-  - [x] [Flex R5PATTERNEQUIPMENT/20 - Post Update](./FLEX/R5PATTERNEQUIPMENT_20_Post_Update.sql)
+      [x] [Flex R5PATTERNEQUIPMENT/20/Insert](./FLEX/R5PATTERNEQUIPMENT_20_Post_Insert.sql)
   
 ## MP Functions
 
