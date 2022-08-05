@@ -27,7 +27,7 @@ In order to identify whether an MP has an active equipment, users would need to 
     - no MP equipment exist
       - [x] [Flex R5MAINTENANCEPATTERN/5/Insert](./FLEX/R5MAINTENANCEPATTERNS/005_Insert.sql)
     - all MP equipment status inactive
-      - [x] [Flex R5PATTERNEQUIPMENT/20/Insert](./FLEX/R5PATTERNEQUIPMENT_20_Post_Insert.sql)
+      - [x] [Flex R5PATTERNEQUIPMENT/20/Insert](./FLEX/R5PATTERNEQUIPMENT/020_Insert.sql)
       - [x] [Flex R5PATTERNEQUIPMENT/20/Update](./FLEX/R5PATTERNEQUIPMENT/020_Update.sql)
   - Inactive :green_square:
     - one or more MP equipment status is not inactive
@@ -44,7 +44,7 @@ To manage these non-native features, the ability to maintained the module via We
   - [x] rename udfsection to Admin Functions
 - Fields associated:
   - [x] mtp_udfchar02, ***Functions*** - selection administration function to perform
-    - RSET, Restart MP
+    - RSET, [Restart MP](#restart-mp)
     - CLMP, Clear MP sequence
     - CPMP, Copy MP sequence
   - [x] mtp_udfchar03, ***Sequence src.*** - lookup for MP sequence to copy; disabled by default, editable when CPMP function selected
@@ -55,5 +55,22 @@ To manage these non-native features, the ability to maintained the module via We
 ![adm_fn screenshot](./assets/images/adm_fn_screenshot.PNG)
   
 #### Restart MP
+Since the WO generated is mostly fixed type, when changes occurs (i.e. meter reset, changing maintenance strategies);  all open WO needed to be closed out prior to deploying changes. Tracking and waiting for the WO to be closed out can be difficult and in a lot cases administrators lost track of it. Best is to put forward the changes without waiting for the WO to be close.
+- [x] Activated when Function field is populated with RSET
+- [x] For MP with multiple equipment, Equipment src. and Equip. Org. src. is required. (selective restart) 
+- [x] [Flex R5MAINTENANCEPATTERNS/25/Update](./FLEX/R5MAINTENANCEPATTERNS/025_Update.sql)
 
+#### Clear MP Sequence
+In some instance, maintenance strategies needed to be revised. To change the MP sequence, the active equipment needed to be deactivated first followed by changes in the sequence which can involve removing the entire sequence list. 
+- [x] Activated when Function field is populated with CLMP
+- [x] Stop if there's any active equipment
+- [x] Mark inactive for referenced sequence and remove the rest
+- [x] [Flex R5MAINTENANCEPATTERNS/30/Update](./FLEX/R5MAINTENANCEPATTERNS/030_Update.sql)
 
+#### Copy MP Sequence
+Although EAM does came with built-in ```Copy MP``` function, we found that the copied MP's sequence do not matches with the source MP . This is not idle if the reason for copying another MP is to copy their sequence. Some MP sequence's can be very long and copying from a another helps with the administration process. 
+- [x] Activated when Function field is populated with CPMP
+- [x] Sequence src. is require
+- [x] Stop if there's any active equipment
+- [x] Reformat copied sequence according to the setup of called MP
+- [x] [Flex R5MAINTENANCEPATTERNS/30/Update](./FLEX/R5MAINTENANCEPATTERNS/030_Update.sql)
